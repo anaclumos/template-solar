@@ -1,0 +1,36 @@
+# https://moonrepo.dev/docs/config/project
+$schema: 'https://moonrepo.dev/schemas/project.json'
+
+type: 'application'
+platform: 'node'
+language: 'typescript'
+
+toolchain:
+  default: 'node'
+
+tasks:
+  dev:
+    command: 'next dev --turbopack'
+    platform: 'node'
+
+  build:
+    command: 'next build'
+    platform: 'node'
+    outputs:
+      - '.next'
+
+  start:
+    command: 'next start'
+    platform: 'node'
+    deps:
+      - '~:build'
+
+  lint:
+    command: 'eslint .'
+    platform: 'node'
+
+  format:
+    command: 'prettier --write .'
+    platform: 'node'
+    options:
+      shell: false

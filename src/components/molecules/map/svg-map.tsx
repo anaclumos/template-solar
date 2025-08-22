@@ -1,18 +1,13 @@
-"use client"
-import { motion } from "motion/react"
+'use client'
+import { motion } from 'motion/react'
 
-import type { SVGProps } from "react"
+import type { SVGProps } from 'react'
 
-export const SVGMap = (props: SVGProps<SVGSVGElement>) => {
+export const SvgMap = (props: SVGProps<SVGSVGElement>) => {
   const width = 481
   const height = 201
   return (
-    <svg
-      viewBox={`0 0 ${width} ${height}`}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+    <svg viewBox={`0 0 ${width} ${height}`} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path
         d="M356.816 59.5522L369.836 89.5312L383.182 110.993L397.011 122.212"
         className="stroke-zinc-800"
@@ -638,12 +633,7 @@ export const SVGMap = (props: SVGProps<SVGSVGElement>) => {
       />
 
       <defs>
-        <pattern
-          id="irrigating-pattern"
-          patternUnits="userSpaceOnUse"
-          width="64"
-          height="64"
-        >
+        <pattern id="irrigating-pattern" patternUnits="userSpaceOnUse" width="64" height="64">
           {Array.from({ length: 34 }, (_, i) => {
             const offset = i * 4
             return (
@@ -656,22 +646,11 @@ export const SVGMap = (props: SVGProps<SVGSVGElement>) => {
             )
           })}
         </pattern>
-        <pattern
-          id="dot-pattern"
-          patternUnits="userSpaceOnUse"
-          width="64"
-          height="64"
-        >
+        <pattern id="dot-pattern" patternUnits="userSpaceOnUse" width="64" height="64">
           {Array.from({ length: 16 }, (_, i) =>
             Array.from({ length: 16 }, (_, j) => (
-              <circle
-                key={`${i}-${j}`}
-                cx={i * 4 + 2}
-                cy={j * 4 + 2}
-                r="0.5"
-                className="fill-orange-400/30"
-              />
-            )),
+              <circle key={`${i}-${j}`} cx={i * 4 + 2} cy={j * 4 + 2} r="0.5" className="fill-orange-400/30" />
+            ))
           )}
         </pattern>
         <motion.linearGradient
@@ -690,7 +669,7 @@ export const SVGMap = (props: SVGProps<SVGSVGElement>) => {
           transition={{
             duration: 3.5,
             repeat: Infinity,
-            ease: "linear",
+            ease: 'linear',
             repeatDelay: 3,
           }}
           gradientUnits="userSpaceOnUse"
@@ -708,7 +687,7 @@ export const SVGMap = (props: SVGProps<SVGSVGElement>) => {
           transition={{
             duration: 3,
             repeat: Infinity,
-            ease: "linear",
+            ease: 'linear',
             repeatDelay: 2,
           }}
           gradientUnits="userSpaceOnUse"

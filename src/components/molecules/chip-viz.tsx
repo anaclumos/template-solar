@@ -1,23 +1,17 @@
-"use client"
+'use client'
 
-import { motion } from "motion/react"
-import { SolarMark } from "../../../public/SolarMark"
+import { motion } from 'motion/react'
+import { SolarMark } from '../../../public/solar-mark'
 
 const ChipViz = () => {
-  const createVariants = ({
-    scale,
-    delay,
-  }: {
-    scale: number
-    delay: number
-  }) => ({
+  const createVariants = ({ scale, delay }: { scale: number; delay: number }) => ({
     initial: { scale: 1 },
     animate: {
       scale: [1, scale, 1],
       transition: {
         duration: 2,
         times: [0, 0.2, 1],
-        ease: [0.23, 1, 0.32, 1],
+        ease: 'easeInOut' as const,
         repeat: Infinity,
         repeatDelay: 2,
         delay,

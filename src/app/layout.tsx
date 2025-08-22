@@ -1,56 +1,37 @@
-import { GeistSans } from "geist/font/sans";
-import type { Metadata } from "next";
-import "./globals.css";
+import { GeistSans } from 'geist/font/sans'
+import type { Metadata } from 'next'
+import './globals.css'
 
-import Footer from "@/components/molecules/Footer";
-import { NavBar } from "@/components/molecules/Navbar";
-import { siteConfig } from "./siteConfig";
+import Footer from '@template-solar/components/molecules/footer'
+import { NavBar } from '@template-solar/components/molecules/navbar'
+import { siteConfig } from './site-config'
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://yoururl.com"),
-	title: siteConfig.name,
-	description: siteConfig.description,
-	keywords: ["Marketing", "Database", "Software"],
-	authors: [
-		{
-			name: "yourname",
-			url: "",
-		},
-	],
-	creator: "yourname",
-	openGraph: {
-		type: "website",
-		locale: "en_US",
-		url: siteConfig.url,
-		title: siteConfig.name,
-		description: siteConfig.description,
-		siteName: siteConfig.name,
-	},
-	twitter: {
-		card: "summary_large_image",
-		title: siteConfig.name,
-		description: siteConfig.description,
-		creator: "@yourname",
-	},
-	icons: {
-		icon: "/favicon.ico",
-	},
-};
+  metadataBase: new URL(siteConfig.metadata.metadataBase),
+  title: siteConfig.metadata.title,
+  description: siteConfig.metadata.description,
+  keywords: siteConfig.metadata.keywords,
+  authors: siteConfig.metadata.authors,
+  creator: siteConfig.metadata.creator,
+  openGraph: siteConfig.metadata.openGraph,
+  twitter: siteConfig.metadata.twitter,
+  icons: siteConfig.metadata.icons,
+}
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode
 }>) {
-	return (
-		<html lang="en">
-			<body
-				className={`${GeistSans.className} min-h-screen overflow-x-hidden scroll-auto bg-gray-50 antialiased selection:bg-orange-100 selection:text-orange-600`}
-			>
-				<NavBar />
-				{children}
-				<Footer />
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en">
+      <body
+        className={`${GeistSans.className} min-h-screen overflow-x-hidden scroll-auto bg-gray-50 antialiased selection:bg-orange-100 selection:text-orange-600`}
+      >
+        <NavBar />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  )
 }

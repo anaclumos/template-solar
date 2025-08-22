@@ -1,5 +1,5 @@
-"use client"
-import { useEffect, useRef } from "react"
+'use client'
+import { useEffect, useRef } from 'react'
 
 type Grid = { alive: boolean; opacity: number }[][]
 
@@ -9,7 +9,7 @@ const GameOfLife = () => {
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
-    const ctx = canvas.getContext("2d")
+    const ctx = canvas.getContext('2d')
     if (!ctx) return
 
     let animationFrameId: number
@@ -26,7 +26,7 @@ const GameOfLife = () => {
           .map(() => ({
             alive: Math.random() > 0.85,
             opacity: Math.random() > 0.85 ? 0.5 : 0,
-          })),
+          }))
       )
 
     const countNeighbors = (grid: Grid, x: number, y: number): number => {
@@ -43,7 +43,7 @@ const GameOfLife = () => {
     }
 
     const draw = () => {
-      ctx.fillStyle = "#F9FAFB"
+      ctx.fillStyle = '#F9FAFB'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
       // Update opacities
@@ -59,13 +59,7 @@ const GameOfLife = () => {
           if (cell.opacity > 0) {
             ctx.fillStyle = `rgba(0, 0, 0, ${cell.opacity})`
             ctx.beginPath()
-            ctx.arc(
-              j * cellSize + cellSize / 2,
-              i * cellSize + cellSize / 2,
-              1,
-              0,
-              Math.PI * 2,
-            )
+            ctx.arc(j * cellSize + cellSize / 2, i * cellSize + cellSize / 2, 1, 0, Math.PI * 2)
             ctx.fill()
           }
         }
@@ -74,14 +68,12 @@ const GameOfLife = () => {
       const next = grid.map((row, i) =>
         row.map((cell, j) => {
           const neighbors = countNeighbors(grid, i, j)
-          const willBeAlive = cell.alive
-            ? neighbors >= 2 && neighbors <= 3
-            : neighbors === 3
+          const willBeAlive = cell.alive ? neighbors >= 2 && neighbors <= 3 : neighbors === 3
           return {
             alive: willBeAlive,
             opacity: cell.opacity,
           }
-        }),
+        })
       )
 
       grid = next

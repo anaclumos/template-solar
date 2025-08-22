@@ -1,12 +1,8 @@
-import type { SVGProps } from "react"
+import type { SVGProps } from 'react'
 
 export const SolarMark = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    viewBox="0 0 42 42"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <title>Solar Mark</title>
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -15,4 +11,3 @@ export const SolarMark = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 )
-
