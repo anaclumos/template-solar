@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../Button";
+import { Button } from "../atoms/Button";
 
 export type CallToActionProps = {
 	title: string;
@@ -20,7 +20,7 @@ export function CallToAction({
 	imageAlt = "",
 }: CallToActionProps) {
 	return (
-		<section className="mx-auto max-w-6xl">
+		<section className="mx-auto max-w-6xl mt-10 mb-40 px-4 xl:px-0">
 			<div className="grid items-center gap-8 sm:grid-cols-6">
 				<div className="sm:col-span-2">
 					<h2 className="scroll-my-60 text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl">

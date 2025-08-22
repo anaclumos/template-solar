@@ -1,4 +1,4 @@
-import { Divider } from "../Divider";
+import { Divider } from "../atoms/Divider";
 import AnalyticsIllustration from "./AnalyticsIllustration";
 import { StickerCard } from "./StickerCard";
 
@@ -16,7 +16,7 @@ export type SolarAnalyticsProps = {
 
 export function SolarAnalytics({ eyebrow, title, cards }: SolarAnalyticsProps) {
 	return (
-		<section className="relative mx-auto w-full max-w-6xl overflow-hidden">
+		<section className="relative mx-auto w-full max-w-6xl overflow-hidden mt-12 mb-40 px-4 xl:px-0">
 			<div>
 				<h2 className="relative scroll-my-24 text-lg font-semibold tracking-tight text-orange-500">
 					{eyebrow}

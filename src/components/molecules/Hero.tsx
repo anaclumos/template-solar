@@ -1,5 +1,5 @@
 import { RiArrowRightUpLine } from "@remixicon/react";
-import { FadeContainer, FadeDiv, FadeSpan } from "../Fade";
+import { FadeContainer, FadeDiv, FadeSpan } from "../atoms/Fade";
 import GameOfLife from "./HeroBackground";
 
 type HeroProps = {
@@ -40,7 +40,7 @@ export function Hero({
 	};
 
 	return (
-		<section aria-label="hero">
+		<section aria-label="hero" className="pt-56">
 			<FadeContainer className="relative flex flex-col items-center justify-center">
 				<FadeDiv className="mx-auto">
 					<a

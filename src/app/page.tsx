@@ -1,10 +1,10 @@
-import { CallToAction } from "@/components/ui/CallToAction";
-import FeatureDivider from "@/components/ui/FeatureDivider";
-import Features, { type FeaturesProps } from "@/components/ui/Features";
-import { Hero } from "@/components/ui/Hero";
-import { MapSection } from "@/components/ui/Map/Map";
-import { SolarAnalytics } from "@/components/ui/SolarAnalytics";
-import Testimonial from "@/components/ui/Testimonial";
+import { CallToAction } from "@/components/molecules/CallToAction";
+import FeatureDivider from "@/components/molecules/FeatureDivider";
+import Features, { type FeaturesProps } from "@/components/molecules/Features";
+import { Hero } from "@/components/molecules/Hero";
+import { MapSection } from "@/components/molecules/Map/Map";
+import { SolarAnalytics } from "@/components/molecules/SolarAnalytics";
+import Testimonial from "@/components/molecules/Testimonial";
 import {
 	RiDropFill,
 	RiNavigationFill,
@@ -110,26 +110,14 @@ export default function Home() {
 
 	return (
 		<main className="relative mx-auto flex flex-col">
-			<div className="pt-56">
-				<Hero {...hero} />
-			</div>
-			<div className="mt-52 px-4 xl:px-0">
-				<Features {...features} />
-			</div>
-			<div className="mt-32 px-4 xl:px-0">
-				<Testimonial {...testimonial} />
-			</div>
-			<FeatureDivider className="my-16 max-w-6xl" />
-			<div className="px-4 xl:px-0">
-				<MapSection {...map} />
-			</div>
-			<FeatureDivider className="my-16 max-w-6xl" />
-			<div className="mt-12 mb-40 px-4 xl:px-0">
-				<SolarAnalytics {...analytics} />
-			</div>
-			<div className="mt-10 mb-40 px-4 xl:px-0">
-				<CallToAction {...cta} />
-			</div>
+			<Hero {...hero} />
+			<Features {...features} />
+			<Testimonial {...testimonial} />
+			<FeatureDivider />
+			<MapSection {...map} />
+			<FeatureDivider />
+			<SolarAnalytics {...analytics} />
+			<CallToAction {...cta} />
 		</main>
 	);
 }

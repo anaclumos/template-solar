@@ -11,8 +11,8 @@ import {
 	RiTruckFill,
 } from "@remixicon/react";
 import { SolarMark } from "../../../public/SolarMark";
-import { Icons } from "../Icons";
-import { Orbit } from "../Orbit";
+import { Icons } from "../atoms/Icons";
+import { Orbit } from "../atoms/Orbit";
 import ChipViz from "./ChipViz";
 
 export type FeaturesProps = {
@@ -38,7 +38,7 @@ export default function Features({
 		<section
 			aria-label={sectionAriaLabel}
 			id={id}
-			className="relative mx-auto max-w-6xl scroll-my-24"
+			className="relative mx-auto max-w-6xl scroll-my-24 mt-24 px-4 xl:px-0"
 		>
 			{/* Vertical Lines */}
 			<div className="pointer-events-none inset-0 select-none">

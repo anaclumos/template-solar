@@ -24,7 +24,7 @@ export default function Testimonial({
 	authorImageSrc = "/images/smiller.jpeg",
 }: TestimonialProps) {
 	return (
-		<section className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-xl shadow-2xl shadow-[#366A79]/70">
+		<section className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-xl shadow-2xl shadow-[#366A79]/70 mt-24">
 			<div className="absolute inset-0 object-cover">
 				<Image
 					alt={backgroundAlt}

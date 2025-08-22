@@ -1,4 +1,4 @@
-import { Icons } from "@/components/Icons";
+import { Icons } from "@/components/atoms/Icons";
 import {
 	RiHome9Fill,
 	RiPlaneLine,
@@ -30,7 +30,7 @@ export const MapSection = ({
 		<section
 			id={id}
 			aria-labelledby={`${id}-title`}
-			className="relative flex w-full max-w-6xl scroll-my-24 flex-col items-center justify-center overflow-hidden rounded-2xl bg-gray-950 px-10 shadow-2xl shadow-black/50 sm:px-16 md:px-28 lg:mx-auto"
+			className="relative flex w-full max-w-6xl scroll-my-24 flex-col items-center justify-center overflow-hidden rounded-2xl bg-gray-950 px-10 shadow-2xl shadow-black/50 sm:px-16 md:px-28 lg:mx-auto px-4 xl:px-0"
 		>
 			<div
 				className="absolute left-0 z-10 h-full backdrop-blur-[2px]"
